@@ -1,93 +1,232 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu Portfólio - Análise de Dados</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Marcus Luiz Pereira — Dados, BI & Automação</title>
+<meta name="description" content="Portfólio de Marcus Luiz Pereira: dashboards de Power BI, Looker Studio e Tableau, automação de ETL em Python e análise de dados aplicada a auditoria de circuitos e telecom.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="hero">
-        <div class="container">
-            <h1 class="hero-title">Marcus Luiz Pereira</h1>
-            <h2 class="hero-subtitle">Especialista em Power BI & Análise de Dados</h2>
-            <p class="hero-description">
-                Dashboards interativos desenvolvidos para diversas áreas, focados em apoiar a tomada de decisões estratégicas.
+
+<a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+<nav class="topbar" aria-label="Navegação principal">
+  <div class="container topbar-inner">
+    <a href="#conteudo" class="topbar-brand" aria-label="Início">
+      MLP<span class="signal-dot" aria-hidden="true"></span>
+    </a>
+    <div class="topbar-links">
+      <a href="#projetos">projetos</a>
+      <a href="#contato">contato</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="conteudo">
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <p class="eyebrow mono">root@marcus:~$ whoami</p>
+      <h1 class="hero-title">Marcus Luiz<br>Pereira</h1>
+      <p class="hero-subtitle">Análise de Dados, BI &amp; Automação</p>
+      <p class="hero-description">
+        Transformo bases dispersas em dashboards que os times realmente usam —
+        de scripts Python que tratam mais de 50 milhões de linhas a painéis
+        interativos em Power BI, Looker Studio e Tableau.
+      </p>
+      <ul class="contact-info" aria-label="Contato">
+        <li>
+          <a class="pill-link" href="mailto:mlp.verde@gmail.com">
+            <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+            <span>mlp.verde@gmail.com</span>
+          </a>
+        </li>
+        <li>
+          <a class="pill-link" href="https://wa.me/5521990075205" target="_blank" rel="noopener">
+            <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+            <span>(21) 99007-5205</span>
+          </a>
+        </li>
+        <li>
+          <a class="pill-link" href="https://www.linkedin.com/in/marcus-luiz-pereira-07025a23/" target="_blank" rel="noopener">
+            <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+            <span>LinkedIn</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="hero-fiber" aria-hidden="true">
+      <svg viewBox="0 0 400 520" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path class="fiber-path" d="M40 20 C 40 120, 340 100, 340 200 S 60 300, 60 380 S 320 440, 320 500"
+          stroke="url(#fiberGrad)" stroke-width="2" stroke-linecap="round"/>
+        <circle class="fiber-node" cx="40" cy="20" r="5"/>
+        <circle class="fiber-node" cx="340" cy="200" r="5" style="--d:0.6s"/>
+        <circle class="fiber-node" cx="60" cy="380" r="5" style="--d:1.2s"/>
+        <circle class="fiber-node" cx="320" cy="500" r="5" style="--d:1.8s"/>
+        <defs>
+          <linearGradient id="fiberGrad" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#00e5c7"/>
+            <stop offset="100%" stop-color="#ffa94d"/>
+          </linearGradient>
+        </defs>
+      </svg>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="pipeline" id="projetos" aria-labelledby="pipeline-heading">
+    <div class="container pipeline-head">
+      <p class="eyebrow mono">// pipeline_de_projetos</p>
+      <h2 id="pipeline-heading" class="section-title">Dashboards em produção</h2>
+      <p class="section-lede">
+        Cada painel abaixo nasceu de um problema real de operação — não são peças de vitrine.
+      </p>
+    </div>
+
+    <div class="container trace-wrap">
+      <ol class="node-list">
+
+        <li class="node-item" style="--i:0">
+          <div class="node-marker">
+            <span class="signal-dot" aria-hidden="true"></span>
+            <span class="node-index mono">01</span>
+          </div>
+          <article class="glass-panel project-card">
+            <div class="project-head">
+              <h3 class="project-title">Dashboard Consultas</h3>
+              <p class="project-company mono">Logictel · Vtal</p>
+            </div>
+            <p class="project-desc">
+              Base alimentada por exportações em CSV, feita para consultar um grande
+              volume de dados rapidamente. Agiliza a análise de circuitos e apoia
+              técnicos de campo na tomada de decisão.
             </p>
-            <div class="contact-info">
-                <a href="mailto:seu.email@gmail.com"><i class="fa-solid fa-envelope"></i> mlp.verde@gmail.com</a>
-                <a href="#"><i class="fa-brands fa-whatsapp"></i> (21) 99007-5205</a>
-                <a href="#"><i class="fa-brands fa-linkedin"></i> https://www.linkedin.com/in/marcus-luiz-pereira-07025a23/</a>
+            <div class="iframe-container">
+              <iframe
+                src="https://datastudio.google.com/embed/reporting/150f86b4-8522-4cf3-8cc4-86505f5faf7e/page/B3AxF"
+                title="Dashboard Consultas — Looker Studio"
+                loading="lazy"
+                sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox">
+              </iframe>
             </div>
-        </div>
-    </header>
+          </article>
+        </li>
 
-    <main class="container">
-        <!-- Dashboard Consultas -->
-        <section class="project-card">
-            <div class="project-content">
-                <h3 class="project-title">Dashboard Consultas</h3>
-                <h4 class="project-company">Desenvolvido para Logictel</h4>
-                <p class="project-desc">
-                    Utiliza bases de dados importadas de arquivos Excel (.csv). Seu principal objetivo é otimizar a consulta de um grande volume de dados, agilizando a análise de circuitos e auxiliando os técnicos na tomada de decisões de forma mais eficiente e assertiva.
-                </p>
-                <div class="iframe-container">
-                    <!-- Substitua o src pelo link do seu Power BI -->
-                    <iframe width="600" height="450" src="https://datastudio.google.com/embed/reporting/150f86b4-8522-4cf3-8cc4-86505f5faf7e/page/B3AxF" frameborder="0" style="border:0" allowfullscreen sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"></iframe>
-                </div>
+        <li class="node-item" style="--i:1">
+          <div class="node-marker">
+            <span class="signal-dot" aria-hidden="true"></span>
+            <span class="node-index mono">02</span>
+          </div>
+          <article class="glass-panel project-card">
+            <div class="project-head">
+              <h3 class="project-title">Dashboard Analítico</h3>
+              <p class="project-company mono">Logictel · Vtal</p>
             </div>
-        </section>
-
-        <!-- Dashboard Analítico -->
-        <section class="project-card">
-            <div class="project-content">
-                <h3 class="project-title">Dashboard Analítico</h3>
-                <h4 class="project-company">Desenvolvido para Logictel</h4>
-                <p class="project-desc">
-                    Utiliza bases de dados importadas de arquivos Excel (.xlsx). Valida entradas e saídas do posto, calcula valores tratados, verifica percentual da meta e identifica horários de maior movimentação.
-                </p>
-                <div class="iframe-container">
-                    <iframe src="https://app.powerbi.com/view?r=eyJrIjoiX19fREVNX19fIn0%3D" allowFullScreen="true"></iframe>
-                </div>
+            <p class="project-desc">
+              Base em planilhas XLSX. Valida entradas e saídas do posto, calcula
+              valores tratados, acompanha percentual de meta e identifica horários
+              de maior movimentação.
+            </p>
+            <div class="iframe-container">
+              <iframe
+                src="https://app.powerbi.com/view?r=SUBSTITUA_PELO_SEU_LINK"
+                title="Dashboard Analítico — Power BI"
+                loading="lazy">
+              </iframe>
+              <p class="embed-note mono">// substitua o src acima pelo link público do Power BI</p>
             </div>
-        </section>
+          </article>
+        </li>
 
-        <!-- Dashboard Produção -->
-        <section class="project-card">
-            <div class="project-content">
-                <h3 class="project-title">Dashboard Produção</h3>
-                <h4 class="project-company">Desenvolvido para Logictel</h4>
-                <p class="project-desc">
-                    Proporciona uma visão detalhada e comparativa da produção dos colaboradores. Com filtros dinâmicos e indicadores de produção, segmenta dados por atividade, cargo e período.
-                </p>
-                <div class="iframe-container">
-                    <iframe src="https://app.powerbi.com/view?r=eyJrIjoiX19fREVNX19fIn0%3D" allowFullScreen="true"></iframe>
-                </div>
+        <li class="node-item" style="--i:2">
+          <div class="node-marker">
+            <span class="signal-dot" aria-hidden="true"></span>
+            <span class="node-index mono">03</span>
+          </div>
+          <article class="glass-panel project-card">
+            <div class="project-head">
+              <h3 class="project-title">Dashboard Produção</h3>
+              <p class="project-company mono">Logictel · Vtal</p>
             </div>
-        </section>
-
-        <!-- Tableau Vendas -->
-        <section class="project-card">
-            <div class="project-content">
-                <h3 class="project-title">Relatório de Análise de Vendas</h3>
-                <h4 class="project-company">Tableau</h4>
-                <p class="project-desc">
-                    Painel interativo para análise estratégica de vendas, reunindo dados de clientes, produtos, lojas e departamentos. Apresenta indicadores de evolução mensal, volume, margem de crescimento e perfil etário.
-                </p>
-                <div class="iframe-container">
-                    <!-- Substitua o src pelo link do seu Tableau -->
-                    <iframe src="https://public.tableau.com/views/Shared" allowFullScreen="true"></iframe>
-                </div>
+            <p class="project-desc">
+              Visão comparativa da produção da equipe, com filtros dinâmicos e
+              indicadores segmentados por atividade, cargo e período.
+            </p>
+            <div class="iframe-container">
+              <iframe
+                src="https://app.powerbi.com/view?r=SUBSTITUA_PELO_SEU_LINK"
+                title="Dashboard Produção — Power BI"
+                loading="lazy">
+              </iframe>
+              <p class="embed-note mono">// substitua o src acima pelo link público do Power BI</p>
             </div>
-        </section>
-    </main>
+          </article>
+        </li>
 
-    <footer>
-        <div class="container">
-            <p>Dashboards desenvolvidos por Seu Nome – Analista de Dados, com foco em Power BI e SQL Server.</p>
-        </div>
-    </footer>
+        <li class="node-item" style="--i:3">
+          <div class="node-marker">
+            <span class="signal-dot" aria-hidden="true"></span>
+            <span class="node-index mono">04</span>
+          </div>
+          <article class="glass-panel project-card">
+            <div class="project-head">
+              <h3 class="project-title">Relatório de Análise de Vendas</h3>
+              <p class="project-company mono">Tableau</p>
+            </div>
+            <p class="project-desc">
+              Painel para análise estratégica de vendas — clientes, produtos, lojas
+              e departamentos — com evolução mensal, volume, margem de crescimento
+              e perfil etário.
+            </p>
+            <div class="iframe-container">
+              <iframe
+                src="https://public.tableau.com/views/SUBSTITUA_PELO_SEU_LINK"
+                title="Relatório de Análise de Vendas — Tableau"
+                loading="lazy">
+              </iframe>
+              <p class="embed-note mono">// substitua o src acima pelo link público do Tableau</p>
+            </div>
+          </article>
+        </li>
+
+      </ol>
+    </div>
+  </section>
+</main>
+
+<footer id="contato">
+  <div class="container footer-inner">
+    <p class="mono footer-line">// fim_de_linha — obrigado por chegar até aqui</p>
+    <ul class="contact-info" aria-label="Contato">
+      <li>
+        <a class="pill-link" href="mailto:mlp.verde@gmail.com">
+          <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+          <span>mlp.verde@gmail.com</span>
+        </a>
+      </li>
+      <li>
+        <a class="pill-link" href="https://wa.me/5521990075205" target="_blank" rel="noopener">
+          <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+          <span>(21) 99007-5205</span>
+        </a>
+      </li>
+      <li>
+        <a class="pill-link" href="https://www.linkedin.com/in/marcus-luiz-pereira-07025a23/" target="_blank" rel="noopener">
+          <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+          <span>LinkedIn</span>
+        </a>
+      </li>
+    </ul>
+    <p class="footer-copyright">Marcus Luiz Pereira — Análise de Dados, BI e Automação.</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
