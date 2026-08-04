@@ -328,11 +328,19 @@ a { color: inherit; }
   display: grid;
   grid-template-columns: 44px 1fr;
   gap: var(--sp-3);
+  /* Visível por padrão: se o JS não rodar por qualquer motivo,
+     o conteúdo (incluindo os dashboards) aparece normalmente. */
+  opacity: 1;
+  transform: none;
+}
+/* A classe .js só existe se script.js executou com sucesso.
+   Só então entra a animação de revelar ao rolar. */
+.js .node-item {
   opacity: 0;
   transform: translateY(24px);
   transition: opacity 0.7s var(--ease), transform 0.7s var(--ease);
 }
-.node-item.is-visible {
+.js .node-item.is-visible {
   opacity: 1;
   transform: translateY(0);
   transition-delay: calc(var(--i, 0) * 60ms);
