@@ -12,9 +12,14 @@
   if (!nodes.length) return;
 
   if (prefersReducedMotion || !('IntersectionObserver' in window)) {
-    nodes.forEach((node) => node.classList.add('is-visible'));
+    // Sem motion reduzido não precisa animar: conteúdo já está
+    // visível por padrão via CSS, então não fazemos nada.
     return;
   }
+
+  // Só a partir daqui ligamos o modo "animado". Se o script
+  // não chegasse a rodar, o CSS puro já garante tudo visível.
+  document.documentElement.classList.add('js');
 
   const observer = new IntersectionObserver(
     (entries, obs) => {
